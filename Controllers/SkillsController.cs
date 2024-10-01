@@ -19,4 +19,22 @@ public class SkillsController : Controller
 
         return View(skill);
     }
+
+    // GET: SkillsController/Create
+    public ActionResult Create ()
+    {
+        return View();
+    }
+
+    // POST: SkillsController/Create
+    [HttpPost]
+    public IActionResult Create ([FromForm] SkillViewModel model)
+    {
+        if (ModelState.IsValid)
+        {
+            return RedirectToAction("Index");
+        }
+
+        return View(model);
+    }
 }

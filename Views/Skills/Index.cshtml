@@ -1,4 +1,5 @@
-﻿@model SkillHub.ViewModels.SkillViewModel
+﻿@using SkillHub.Helpers
+@model SkillHub.ViewModels.SkillViewModel
 
 @{
     ViewBag.Title = "Skill Details";
@@ -31,7 +32,10 @@
         </dd>
     </dl>
 </div>
-<div>
-    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
-    <a asp-action="Index">Back to List</a>
-</div>
+
+@Html.CreateList(new[] { "Lots", "of different", "skills" })
+
+
+
+
+
