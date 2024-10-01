@@ -1,3 +1,5 @@
+using SkillHub.Middleware;
+
 namespace SkillHub;
 
 public class Program
@@ -18,6 +20,14 @@ public class Program
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
+
+
+        //app.Run(async context =>
+        //{
+        //    await context.Response.WriteAsync("Hello world!");
+        //});
+
+        app.UseExampleMiddleware();
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();

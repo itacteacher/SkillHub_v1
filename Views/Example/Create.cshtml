@@ -1,0 +1,20 @@
+﻿@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create New Item</h2>
+
+<form asp-action="Create" method="post">
+    <div class="form-group">
+        <label for="newExample">Item Name</label>
+        <input type="text" id="newExample" name="newExample" class="form-control" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Create</button>
+</form>
+
+<a href="/Example">Back to List</a>
+
+@if (ViewBag.Message != null)
+{
+    <div class="alert alert-success">@ViewBag.Message</div>
+}
