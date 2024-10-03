@@ -1,4 +1,4 @@
-namespace SkillHub.Models;
+namespace SkillHub.Web.Models;
 
 public class ErrorViewModel
 {

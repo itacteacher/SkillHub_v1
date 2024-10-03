@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SkillHub.ViewModels;
+using SkillHub.Web.Models;
 
-namespace SkillHub.Controllers;
+namespace SkillHub.Web.Controllers;
 public class SkillsController : Controller
 {
     // GET: SkillsController
@@ -15,7 +15,7 @@ public class SkillsController : Controller
         };
 
         ViewBag.Subtitle = "Programming in C#";
-        ViewData["AnoterSubtitle"] = "ASP.NET Core MVC";
+        ViewData["AnotherSubtitle"] = "ASP.NET Core MVC";
 
         return View(skill);
     }

@@ -1,6 +1,4 @@
-using SkillHub.Middleware;
-
-namespace SkillHub;
+namespace SkillHub.Web;
 
 public class Program
 {
@@ -16,18 +14,10 @@ public class Program
         // Configure the HTTP request pipeline.
         if (!app.Environment.IsDevelopment())
         {
-            app.UseExceptionHandler("/Home/Error");
+            app.UseExceptionHandler("/Skills/Error");
             // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
             app.UseHsts();
         }
-
-
-        //app.Run(async context =>
-        //{
-        //    await context.Response.WriteAsync("Hello world!");
-        //});
-
-        app.UseExampleMiddleware();
 
         app.UseHttpsRedirection();
         app.UseStaticFiles();
@@ -38,7 +28,7 @@ public class Program
 
         app.MapControllerRoute(
             name: "default",
-            pattern: "{controller=Home}/{action=Index}/{id?}");
+            pattern: "{controller=Skills}/{action=Index}/{id?}");
 
         app.Run();
     }

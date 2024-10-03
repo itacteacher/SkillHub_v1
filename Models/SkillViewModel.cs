@@ -1,10 +1,11 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.Diagnostics.CodeAnalysis;
 
-namespace SkillHub.ViewModels;
+namespace SkillHub.Web.Models;
 
 public class SkillViewModel
 {
+    [Required(ErrorMessage = "Id is required.")]
     public int Id { get; set; }
 
     [Required(ErrorMessage = "Name is required.")]
